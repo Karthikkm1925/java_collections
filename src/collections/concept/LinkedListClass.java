@@ -1,70 +1,76 @@
 package collections.concept;
 
 import java.util.Arrays;
-import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
 public class LinkedListClass {
 
-	public static void main(String[] args) {
-		
-		LinkedList<String> linkedlist1 = new LinkedList<String>();
-		
-		System.out.println("\nCheck is there any Elements present : \n"+
-					(linkedlist1.isEmpty() ? "Yes Empty":"Not Empty"));
-		linkedlist1.add("First");
-		linkedlist1.add("Second");
-		linkedlist1.add("Third");
-		
-		System.out.println("\nFirst added these elements :\n"+linkedlist1);
-		
-		System.out.println("Now checking list is empty or not :\n"+
-				(linkedlist1.isEmpty() ? "Yes Empty":"Elements present"));
-		
-		System.out.println("First Element is : "+linkedlist1.getFirst());
-		System.out.println("second Element is : "+linkedlist1.getLast());
+    public static void main(String[] args) {
 
-		List<String> linkedList2 = Arrays.asList("one","two","three");
-		linkedlist1.addAll(linkedList2);
-		System.out.println("Ckeck list2 is present in list1 or not:\n"+
-		(linkedlist1.containsAll(linkedList2) ? "Yes added":"No not yet added"));
-		System.out.println("\nLater added these to exsting linkedlist1 : \n"+linkedList2);
-		System.out.println("\nTotally now in linkedlist1 we have : \n"+linkedlist1);
-		
-		System.out.println("\nFirst element in list1 is :\n"+linkedlist1.getFirst());
-		System.out.println("\nLast element in list1 is :\n"+linkedlist1.getFirst());
-		System.out.println("\nMiddle element in list1 is :\n"+linkedlist1.get(linkedlist1.size()/2));
-		linkedlist1.addLast("Last number");
-		linkedlist1.addFirst("First number ");
-		
-		System.out.println("\nAfter adding at something at first and last now list1 is: "+linkedlist1);
-		List<String> inserlist = Arrays.asList("A","B","C","D","E");
-		linkedlist1.addAll(linkedlist1.size()/2, inserlist);
-		System.out.println("\nAfter insrting set of elements at middle :\n "+linkedlist1);
-		linkedlist1.add((linkedlist1.size()/2)/2,"Quarter");
-		System.out.println("\nAfter adding 'Quarter' at first half middle position:\n"+linkedlist1);
-		System.out.println("\nMiddle element infinal list :\n"+linkedlist1.size()/2);
-		
-		System.out.println("\nLet's set Last element as 'Mazaa' in list2 :\n"+
-								linkedList2.set(linkedList2.size()-1,"Mazaa"));
-		
-		System.out.println("list2 :\n"+linkedList2);
-		System.out.println("Position of 'Mazaa' in list1"+linkedlist1.indexOf("Mazaa"));
-		System.out.println("Let's add 'Mazaa' multiple times :");
- 
-		
- 		System.out.println("Last occrance of 'Mazaa' in list1 is :\n"+linkedlist1.lastIndexOf("Mazaa"));
-		System.out.println("\nLet's Loop over list1\n");
-		for (String elements : linkedlist1) {
-			System.out.print(elements+" ");
-		}
-		System.out.println("will check first occerance of 'Mazaa' :\n");
-		System.out.println("\nLet's remove first and last element in list1 :\n");
-		linkedlist1.removeLast();linkedlist1.removeFirst();
-		System.out.println("let's remove list2 :"+linkedlist1.removeAll(linkedList2));
-		System.out.println("Size of final list :\n"+linkedlist1);
- 		
-	}
+        LinkedList<String> linkedList1 = new LinkedList<>();
 
+        System.out.println("\nCheck if any elements are present:\n" +
+                (linkedList1.isEmpty() ? "Yes, Empty" : "Not Empty"));
+
+        linkedList1.add("First");
+        linkedList1.add("Second");
+        linkedList1.add("Third");
+
+        System.out.println("\nInitially added elements:\n" + linkedList1);
+
+        System.out.println("Now checking if the list is empty:\n" +
+                (linkedList1.isEmpty() ? "Yes, Empty" : "Elements present"));
+
+        System.out.println("First element: " + linkedList1.getFirst());
+        System.out.println("Second element: " + linkedList1.getLast());
+
+        List<String> linkedList2 = Arrays.asList("one", "two", "three");
+        linkedList1.addAll(linkedList2);
+
+        System.out.println("Check if list2 elements are added to list1:\n" +
+                (linkedList1.containsAll(linkedList2) ? "Yes, added" : "No, not yet added"));
+
+        System.out.println("\nAdded these to existing linkedList1:\n" + linkedList2);
+        System.out.println("\nNow linkedList1 contains:\n" + linkedList1);
+
+        System.out.println("\nFirst element in list1:\n" + linkedList1.getFirst());
+        System.out.println("\nLast element in list1:\n" + linkedList1.getFirst());
+        System.out.println("\nMiddle element in list1:\n" + linkedList1.get(linkedList1.size() / 2));
+
+        linkedList1.addFirst("First number");
+        linkedList1.addLast("Last number");
+
+        System.out.println("\nAfter adding elements at first and last:\n" + linkedList1);
+
+        List<String> insertList = Arrays.asList("A", "B", "C", "D", "E");
+        linkedList1.addAll(linkedList1.size() / 2, insertList);
+
+        System.out.println("\nAfter inserting a set of elements in the middle:\n" + linkedList1);
+
+        linkedList1.add((linkedList1.size() / 2) / 2, "Quarter");
+        System.out.println("\nAfter adding 'Quarter' at the first half middle position:\n" + linkedList1);
+        System.out.println("\nMiddle element index in final list:\n" + linkedList1.size() / 2);
+
+        linkedList2.set(linkedList2.size() - 1, "Mazaa");
+        System.out.println("\nUpdated list2:\n" + linkedList2);
+        System.out.println("Position of 'Mazaa' in list1: " + linkedList1.indexOf("Mazaa"));
+        System.out.println("Let's add 'Mazaa' multiple times:");
+
+        System.out.println("Last occurrence of 'Mazaa' in list1:\n" + linkedList1.lastIndexOf("Mazaa"));
+
+        System.out.println("\nIterating through list1:\n");
+        for (String element : linkedList1) {
+            System.out.print(element + " ");
+        }
+
+        System.out.println("\n\nChecking first occurrence of 'Mazaa':\n");
+        System.out.println("\nRemoving first and last elements from list1:\n");
+
+        linkedList1.removeFirst();
+        linkedList1.removeLast();
+
+        System.out.println("Removing elements of list2 from list1: " + linkedList1.removeAll(linkedList2));
+        System.out.println("Final list size and elements:\n" + linkedList1);
+    }
 }
